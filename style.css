@@ -1,58 +1,147 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
 
-body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #004e92, #000428); display: flex; justify-content: center; align-items: center; min-height: 100vh; color: #f9f9f9; padding: 1rem; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.widget { background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(15px); border-radius: 25px; padding: 2.5rem 3rem; width: 100%; max-width: 900px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); animation: fadeIn 1s ease-in-out; display: flex; flex-direction: column; align-items: center; gap: 2rem; }
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at center, #0a0014 0%, #0a0014 40%, #0a0014 100%);
+  color: #c78aff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-header { text-align: center; }
+header {
+  width: 100%;
+  background: rgba(30, 0, 60, 0.9);
+  color: #d5a3ff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 25px #8000ff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-h1 { font-size: 2.5rem; color: #00e5ff; text-shadow: 0 0 12px rgba(0, 229, 255, 0.6); margin-bottom: 1rem; }
+header h1 {
+  font-size: 1.6rem;
+  text-shadow: 0 0 10px #a200ff;
+}
 
-.intro { max-width: 700px; font-size: 1.05rem; line-height: 1.6; color: #e0e0e0; }
+nav button {
+  background: transparent;
+  border: 2px solid #b366ff;
+  color: #dcb8ff;
+  padding: 8px 18px;
+  margin: 0 5px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Orbitron', sans-serif;
+}
 
-.interactive { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; width: 100%; }
+nav button:hover {
+  background: #a200ff;
+  color: #fff;
+  box-shadow: 0 0 15px #b84dff;
+}
 
-input { flex: 1; min-width: 250px; max-width: 400px; padding: 0.9rem; border: none; border-radius: 12px; font-size: 1rem; outline: none; text-align: center; color: #222; }
+main {
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 900px;
+}
 
-button { background: linear-gradient(135deg, #ff512f, #dd2476); color: #fff; border: none; padding: 0.9rem 1.5rem; border-radius: 12px; font-weight: 600; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
+.section {
+  display: none;
+  animation: fadeIn 0.6s ease;
+}
 
-button:hover { transform: scale(1.08); box-shadow: 0 6px 20px rgba(255, 80, 140, 0.6); }
+.section.active {
+  display: block;
+}
 
-.message { text-align: center; font-size: 1.2rem; min-height: 30px; color: #ffea00; animation: fadeInUp 0.5s ease; }
+h2 {
+  color: #dcb8ff;
+  text-shadow: 0 0 12px #a200ff;
+  margin-bottom: 20px;
+}
 
-.cards { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; width: 100%; }
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
 
-.card { background: rgba(255, 255, 255, 0.12); border-radius: 18px; padding: 1.5rem; width: 100%; max-width: 270px; text-align: center; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease, box-shadow 0.4s ease; animation: float 4s ease-in-out infinite; }
+.card {
+  background: rgba(25, 0, 50, 0.9);
+  border-radius: 15px;
+  padding: 15px;
+  color: #e5ccff;
+  box-shadow: 0 0 15px rgba(140, 0, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-.card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0, 229, 255, 0.5); }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #b84dff;
+}
 
-.card h3 { color: #00e5ff; font-size: 1.2rem; margin-bottom: 0.5rem; }
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 
-.card p { font-size: 0.95rem; color: #f5f5f5; line-height: 1.5; }
+footer {
+  background: rgba(25, 0, 50, 0.9);
+  color: #b366ff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 0 20px #8000ff;
+  margin-top: auto;
+}
 
-/* 🔹 Rodapé */
-footer { text-align: center; font-size: 0.9rem; color: #aaa; }
+a {
+  color: #c78aff;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-/* ✨ Animações */
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #a200ff;
+}
 
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
 
-/* 📱 Responsividade */
-@media (max-width: 768px) { .widget { padding: 1.8rem; }
-  
-  h1 { font-size: 2rem; }
+  nav {
+    margin-top: 10px;
+  }
 
-  .intro { font-size: 0.95rem; }
-  
-  .card { max-width: 100%; }
+  .card {
+    padding: 10px;
+  }
+}
 
-  .cards { flex-direction: column; align-items: center; } }
 
-@media (max-width: 480px) { h1 { font-size: 1.7rem; }
-
-  .intro { font-size: 0.9rem; }
-
-  button, input { font-size: 0.9rem; } }
