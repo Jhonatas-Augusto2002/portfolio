@@ -1,67 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>E-commerce Loja Simulada</title>
-<link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Widget Interativo — Portfólio Jhonatas Augusto</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="widget">
 <header>
-<h1>🛍️ LojaSuperVarejo</h1>
-<nav>
-<button id="btn-produtos">Produtos</button>
-<button id="btn-carrinho">Carrinho</button>
-<button id="btn-sobre">Sobre</button>
-</nav>
+<h1>Widget Interativo</h1>
+<p class="intro">
+        É um projeto que eu criei para mostrar alguns fundamentos que estou focando para desenvolvimento front-end iniciante: 
+        design responsivo, interatividade, cores contrastantes e detalhismo.
+</p>
 </header>
 
-<main>
-<!-- Home visível -->
-<section id="home">
-<h2>Bem-vindo à Loja Super Varejo!</h2>
-<p>Não perca a chance de comprar roupas resistentes e muito confortáveis  para curtir um final de semana empolgante.</p>
+<section class="interactive">
+<input type="text" id="userInput" placeholder="Digite seu nome..." />
+ <button id="sendBtn">ENTER
+ </button>
 </section>
-  
-<!-- Produtos -->
-<section id="produtos" class="oculto">
-<h2>Produtos</h2>
-<div class="produtos-container">
-<div class="produto">
-<h3>Camisa de Esportes</h3>
-<p>R$ 15,00</p>
-<button class="add-carrinho">Adicionar ao Carrinho</button>
+
+<section class="message" id="messageBox"></section>
+
+<section class="cards">
+<div class="card">
+<h3>Design Responsivo</h3>
+<p>O layout se adapta perfeitamente a qualquer tela, proporcionando uma experiência fluida em PC, tablet ou smartphone.</p>
 </div>
-<div class="produto">
-<h3>Moletom Roxo</h3>
-<p>R$ 50,00</p>
-<button class="add-carrinho">Adicionar ao Carrinho</button>
+<div class="card">
+<h3>Animações Modernas</h3>
+<p>Transições sutis e animações discretas, interativas e de impacto visual que fazem o projeto ser bem moderno e profissional.</p>
 </div>
-<div class="produto">
-<h3>Calça Jeans</h3>
-<p>R$ 100,00</p>
-<button class="add-carrinho">Adicionar ao Carrinho</button>
-</div>
+<div class="card">
+<h3>Interatividade</h3>
+<p>Opção de feedback em tempo real. E foi criado com meu domínio em JavaScript e atenção pela experiência de quem for cliente.</p>
 </div>
 </section>
 
-<!-- Carrinho -->
-<section id="carrinho" class="oculto">
-<h2>🛒 Carrinho de Compras</h2>
-<ul id="lista-carrinho"></ul>
-<p id="total">Total: R$ 0,00</p>
-<button id="comprar">🟢 Comprar</button>
-</section>
-
-<!-- Sobre -->
-<section id="sobre" class="oculto">
-<h2>Sobre o projeto</h2>
-<p>Desenvolvi para o meu portfólio de Dev Web Front-End Júnior.</p>
-<p>Feito com HTML, CSS e JavaScript — estilizado para ser moderno e bem funcional. E se quiser pode me dizer para eu enviar ou outra página com funcionalidades para escolher cor, tamanho dos produtos, aréa de login para cadastro de clientes no layout e etc... Tudo na função front-end, eu quis colocar o máximo de funionalidades necessárias para demonstrar como é o meu nível técnico front-ent junior com poucos detalhes nível pleno, mas com certeza ficarei feliz em elaborar outra página com mais funcionalidades se preferir assim.</p>
-</section>
-</main>
-
-<div id="mensagem"></div>
+<footer>
+<p>Desenvolvido por <strong>Jhonatas Augusto</strong> — Desenvolvedor front-end</p>
+</footer>
+</div>
 
 <script src="script.js"></script>
 </body>

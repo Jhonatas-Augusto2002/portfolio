@@ -1,45 +1,58 @@
-body { margin: 0; font-family: 'Orbitron', sans-serif; background-color: #0a001a; color: #fff; text-align: center; }
-header { background: linear-gradient(90deg, #6f00ff, #b400ff); padding: 1rem; box-shadow: 0 0 15px #9d00ff; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-h1 { margin: 0.3rem 0; font-size: 1.8rem; }
+body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #004e92, #000428); display: flex; justify-content: center; align-items: center; min-height: 100vh; color: #f9f9f9; padding: 1rem; }
 
-nav { margin-top: 0.5rem; }
+.widget { background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(15px); border-radius: 25px; padding: 2.5rem 3rem; width: 100%; max-width: 900px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); animation: fadeIn 1s ease-in-out; display: flex; flex-direction: column; align-items: center; gap: 2rem; }
 
-button { background-color: transparent; border: 2px solid #a200ff; color: #fff; padding: 0.5rem 1rem; margin: 0.3rem; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; }
+header { text-align: center; }
 
-button:hover { background-color: #a200ff; box-shadow: 0 0 10px #a200ff; }
+h1 { font-size: 2.5rem; color: #00e5ff; text-shadow: 0 0 12px rgba(0, 229, 255, 0.6); margin-bottom: 1rem; }
 
-section { display: none; padding: 2rem; }
+.intro { max-width: 700px; font-size: 1.05rem; line-height: 1.6; color: #e0e0e0; }
 
-#home { display: block; padding: 2rem; }
+.interactive { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; width: 100%; }
 
-.produtos-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+input { flex: 1; min-width: 250px; max-width: 400px; padding: 0.9rem; border: none; border-radius: 12px; font-size: 1rem; outline: none; text-align: center; color: #222; }
 
-.produto { background: rgba(100, 0, 180, 0.2); border: 1px solid #a200ff; border-radius: 15px; padding: 1rem; width: 220px; box-shadow: 0 0 15px #a200ff; }
+button { background: linear-gradient(135deg, #ff512f, #dd2476); color: #fff; border: none; padding: 0.9rem 1.5rem; border-radius: 12px; font-weight: 600; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
 
-.produto button { margin-top: 0.5rem; }
+button:hover { transform: scale(1.08); box-shadow: 0 6px 20px rgba(255, 80, 140, 0.6); }
 
-#mensagem { position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background: #6f00ff; color: white; padding: 10px 20px; border-radius: 12px; box-shadow: 0 0 10px #a200ff; display: none; font-weight: bold; }
+.message { text-align: center; font-size: 1.2rem; min-height: 30px; color: #ffea00; animation: fadeInUp 0.5s ease; }
 
-#lista-carrinho { list-style: none; padding: 0; }
+.cards { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; width: 100%; }
 
-.item-carrinho { background: rgba(162, 0, 255, 0.1); border: 1px solid #a200ff; margin: 0.5rem auto; padding: 0.7rem; border-radius: 10px; width: 80%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.card { background: rgba(255, 255, 255, 0.12); border-radius: 18px; padding: 1.5rem; width: 100%; max-width: 270px; text-align: center; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease, box-shadow 0.4s ease; animation: float 4s ease-in-out infinite; }
 
-.quantidade-controle { display: flex; align-items: center; gap: 5px; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0, 229, 255, 0.5); }
 
-.quantidade-controle span { font-weight: bold; color: #a200ff; }
+.card h3 { color: #00e5ff; font-size: 1.2rem; margin-bottom: 0.5rem; }
 
-.quantidade-controle button { padding: 3px 8px; font-size: 1rem; }
+.card p { font-size: 0.95rem; color: #f5f5f5; line-height: 1.5; }
 
-#comprar { margin-top: 1rem; background-color: #00ff6a; border: none; color: #0a001a; font-weight: bold; border-radius: 10px; box-shadow: 0 0 10px #00ff6a; }
+/* 🔹 Rodapé */
+footer { text-align: center; font-size: 0.9rem; color: #aaa; }
 
-#comprar:hover { background-color: #0a001a; color: #00ff6a; border: 2px solid #00ff6a; }
+/* ✨ Animações */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Responsividade */
-@media (max-width: 768px) { .produtos-container { flex-direction: column; align-items: center; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* 📱 Responsividade */
+@media (max-width: 768px) { .widget { padding: 1.8rem; }
   
-  .produto { width: 80%; }
+  h1 { font-size: 2rem; }
+
+  .intro { font-size: 0.95rem; }
   
-  header h1 { font-size: 1.4rem; }
-  
-  .item-carrinho { flex-direction: column; } }
+  .card { max-width: 100%; }
+
+  .cards { flex-direction: column; align-items: center; } }
+
+@media (max-width: 480px) { h1 { font-size: 1.7rem; }
+
+  .intro { font-size: 0.9rem; }
+
+  button, input { font-size: 0.9rem; } }
