@@ -1,0 +1,45 @@
+body { margin: 0; font-family: 'Orbitron', sans-serif; background-color: #0a001a; color: #fff; text-align: center; }
+header { background: linear-gradient(90deg, #6f00ff, #b400ff); padding: 1rem; box-shadow: 0 0 15px #9d00ff; }
+
+h1 { margin: 0.3rem 0; font-size: 1.8rem; }
+
+nav { margin-top: 0.5rem; }
+
+button { background-color: transparent; border: 2px solid #a200ff; color: #fff; padding: 0.5rem 1rem; margin: 0.3rem; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; }
+
+button:hover { background-color: #a200ff; box-shadow: 0 0 10px #a200ff; }
+
+section { display: none; padding: 2rem; }
+
+#home { display: block; padding: 2rem; }
+
+.produtos-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+
+.produto { background: rgba(100, 0, 180, 0.2); border: 1px solid #a200ff; border-radius: 15px; padding: 1rem; width: 220px; box-shadow: 0 0 15px #a200ff; }
+
+.produto button { margin-top: 0.5rem; }
+
+#mensagem { position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background: #6f00ff; color: white; padding: 10px 20px; border-radius: 12px; box-shadow: 0 0 10px #a200ff; display: none; font-weight: bold; }
+
+#lista-carrinho { list-style: none; padding: 0; }
+
+.item-carrinho { background: rgba(162, 0, 255, 0.1); border: 1px solid #a200ff; margin: 0.5rem auto; padding: 0.7rem; border-radius: 10px; width: 80%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+
+.quantidade-controle { display: flex; align-items: center; gap: 5px; }
+
+.quantidade-controle span { font-weight: bold; color: #a200ff; }
+
+.quantidade-controle button { padding: 3px 8px; font-size: 1rem; }
+
+#comprar { margin-top: 1rem; background-color: #00ff6a; border: none; color: #0a001a; font-weight: bold; border-radius: 10px; box-shadow: 0 0 10px #00ff6a; }
+
+#comprar:hover { background-color: #0a001a; color: #00ff6a; border: 2px solid #00ff6a; }
+
+/* Responsividade */
+@media (max-width: 768px) { .produtos-container { flex-direction: column; align-items: center; }
+  
+  .produto { width: 80%; }
+  
+  header h1 { font-size: 1.4rem; }
+  
+  .item-carrinho { flex-direction: column; } }
