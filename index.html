@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NeoShop Futurista</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Widget Interativo — Portfólio Jhonatas Augusto</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🪐 NeoShop</h1>
-    <nav>
-      <button onclick="showSection('produtos')">Produtos</button>
-      <button onclick="showSection('sobre')">Sobre</button>
-      <button onclick="showSection('contato')">Contato</button>
-    </nav>
-  </header>
+<div class="widget">
+<header>
+<h1>Widget Interativo</h1>
+<p class="intro">
+        É um projeto que eu criei para mostrar alguns fundamentos que estou focando para desenvolvimento front-end iniciante: 
+        design responsivo, interatividade, cores contrastantes e detalhismo.
+</p>
+</header>
 
-  <main>
-    <section id="produtos" class="section active">
-      <h2>Produtos em Destaque</h2>
-      <div class="produtos">
-        <div class="card">
-          <img src="https://via.placeholder.com/250x150/8000ff/ffffff?text=Cyber+Watch" alt="Cyber Watch" />
-          <h3>Cyber Watch</h3>
-          <p>Relógio inteligente com IA e design futurista.</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/250x150/6a00ff/ffffff?text=Smart+Glasses" alt="Smart Glasses" />
-          <h3>Smart Glasses</h3>
-          <p>Óculos holográficos com assistente virtual integrado.</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/250x150/7000ff/ffffff?text=Holo+Speaker" alt="Holo Speaker" />
-          <h3>Holo Speaker</h3>
-          <p>Caixa de som com projeção 3D e som cristalino.</p>
-        </div>
-      </div>
-    </section>
+<section class="interactive">
+<input type="text" id="userInput" placeholder="Digite seu nome..." />
+ <button id="sendBtn">ENTER
+ </button>
+</section>
 
-    <section id="sobre" class="section">
-      <h2>Sobre o NeoShop</h2>
-      <p>O <strong>NeoShop</strong> é um projeto criado para demonstrar minhas habilidades como desenvolvedor web front-end. Inspirado na estética cyberpunk, combina design limpo, luzes neon e tecnologia moderna.</p>
-    </section>
+<section class="message" id="messageBox"></section>
 
-    <section id="contato" class="section">
-      <h2>Contato</h2>
-      <p>Quer entrar em contato ou contratar meus serviços?</p>
-      <p><strong>Email:</strong> seuemail@exemplo.com</p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/seuusuario" target="_blank">github.com/seuusuario</a></p>
-    </section>
-  </main>
+<section class="cards">
+<div class="card">
+<h3>Design Responsivo</h3>
+<p>O layout se adapta perfeitamente a qualquer tela, proporcionando uma experiência fluida em PC, tablet ou smartphone.</p>
+</div>
+<div class="card">
+<h3>Animações Modernas</h3>
+<p>Transições sutis e animações discretas, interativas e de impacto visual que fazem o projeto ser bem moderno e profissional.</p>
+</div>
+<div class="card">
+<h3>Interatividade</h3>
+<p>Opção de feedback em tempo real. E foi criado com meu domínio em JavaScript e atenção pela experiência de quem for cliente.</p>
+</div>
+</section>
 
-  <footer>
-    © 2025 NeoShop Futurista — Criado por [Seu Nome]
-  </footer>
+<footer>
+<p>Desenvolvido por <strong>Jhonatas Augusto</strong> — Desenvolvedor front-end</p>
+</footer>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
